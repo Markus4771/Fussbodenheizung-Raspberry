@@ -1,0 +1,34 @@
+room: bad
+
+sensor:
+  type: mlx90614
+  i2c_bus: 1
+  i2c_address: "0x5A"
+
+thermostat:
+  target_temperature: 24.0
+  hysteresis: 0.4
+  max_floor_temperature: 32.0
+  min_on_seconds: 120
+  min_off_seconds: 120
+
+window:
+  enabled: true
+  open_delay_seconds: 30
+  close_delay_seconds: 120
+
+shelly:
+  host: "192.168.1.80"
+
+mqtt:
+  enabled: true
+  host: "192.168.1.10"
+  port: 1883
+  base_topic: "fussbodenheizung/bad"
+  username: ""
+  password: ""
+
+display:
+  rotation: 90
+  width: 320
+  height: 240
